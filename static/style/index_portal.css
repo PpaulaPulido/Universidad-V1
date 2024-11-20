@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body a {
+    text-decoration: none;
+}
+
+.navbar_header {
+    padding: 10px 15px;
+}
+
+.header_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list_logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.container_logo {
+    margin-right: 40px;
+}
+
+.list_li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.list_li .logo {
+    color: #07b48f;
+    font-size: 30px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.list_li .login {
+    margin-right: 40px;
+    font-size: 17px;
+}
+
+.list_li img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.list_li i {
+    margin-right: 15px;
+    color: #07b48f;
+}
+
+.navbar {
+    padding: 1rem;
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1px;
+}
+
+.navbar-list a {
+    color: #000;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+.container_list {
+    display: flex;
+    justify-content: center;
+    margin-right: 60px;
+}
+
+.container_list li {
+    margin: 0 20px;
+}
+
+.list_green {
+    background-color: #07b48f;
+    border-radius: 8px 8px 0 0;
+
+}
+
+.list_green a {
+    color: #fff;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.submenu-container {
+    position: absolute;
+    top: 60px;
+    left: -162px;
+    overflow: hidden;
+    opacity: 0;
+    padding: 20px;
+    width: 100vw;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.submenu {
+    list-style: none;
+}
+
+.submenu li a {
+    color: #000;
+    padding: 0.5rem 1rem;
+    display: block;
+    white-space: nowrap;
+}
+
+.submenu li a:hover {
+    background-color: #555;
+}
+
+.submenu-container.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/*estilos carussel*/
+.carousel-item img {
+    height: 80vh;
+    object-fit: cover;
+}
+
+.carousel-caption h5 {
+    font-size: 30px;
+}
+
+.carousel-caption p {
+    font-size: 20px;
+}
+
+/*estilos*/
+.container_recycle {
+    padding: 20px;
+}
+
+.recycle_content {
+    padding: 20px;
+    border-radius: 20px 5px;
+    width: 80rem;
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.menu_list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #07b48f;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.menu_list li {
+    padding: 8px;
+    width: 200px;
+    text-align: center;
+}
+
+.menu_list li a {
+    color: #fff;
+    transition: border-bottom 0.3s ease;
+}
+
+.menu_list li a:hover {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #07b48f;
+    margin: 20px 0;
+    padding-bottom: 10px;
+}
+
+.info_details {
+    padding: 20px;
+    display: flex;
+    margin: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.details_img {
+    width: 60rem;
+    height: fit-content;
+    max-width: 90rem;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    max-height: 500px;
+}
+
+.details_text {
+    padding: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.details_text p {
+    margin-top: 10px;
+}
+
+.info_icon {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info_icon i {
+    font-size: 30px;
+    margin-right: 20px;
+    color: #07b48f;
+}
+
+.text {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.container_kg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+        url(https://www.ngenespanol.com/wp-content/uploads/2023/02/lenguaje-arboles.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    min-height: 500px;
+}
+
+.container_text {
+    width: 500px;
+    margin: auto;
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+    margin-top: 80px;
+}
+
+.container_text p {
+    margin-bottom: 30px;
+}
+
+.container_text span {
+    font-size: 6rem;
+    margin-left: 20px;
+}
+
+.counter {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_consumption {
+    padding: 60px 50px 0px 50px;
+}
+
+.consumption_title {
+    background-color: #07b48f;
+    color: #fff;
+    width: 20%;
+    text-align: center;
+    padding: 5px 20px;
+    margin: 20px auto;
+    border-radius: 2px;
+}
+.consumption_text{
+    font-style: italic;
+    font-size: 23px;
+    text-align: center;
+    margin: 60px 0;
+}
+.consumption_data {
+    background-color: #07b48f;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+.data_icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.data_icon i{
+    font-size: 40px;
+    background-color: #fff;
+    padding: 20%;
+    border-radius: 50%;
+    color: #07b48f;
+    margin: 20px 0 10px 0;
+}
+.data_icon p{
+    font-size: 18px;
+}
+.data_icon .counter_icon{
+    display: flex;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.data_icon span{
+    margin-left: 10px;
+    margin-right: 5px;
+}
+/* Animacion */
+.efecto>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.efecto>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+
+}
+
+.efecto>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+
+}
+
+.efecto>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+
+}
+
+.efecto>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+@media (max-width: 768px) {
+    .olas {
+        height: 40px;
+        min-height: 40px;
+    }
+}

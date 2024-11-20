@@ -18,42 +18,50 @@ function image_zoom() {
         });
 
         tl.to("img", {
-            scale: 2, // El zoom máximo
+            scale: 2,
             ease: "power1.inOut"
         })
             .to(".image-container", {
-                opacity: 0, // Desaparece la imagen después del zoom
+                opacity: 0, 
                 ease: "power1.inOut"
             }, "-=0.5")
             .to(".section.hero", {
-                opacity: 1, // Muestra la sección del paisaje
+                opacity: 1,
                 ease: "power1.inOut"
             }, "-=0.5")
             .to(".section.gradient-purple", {
                 y: 0,
                 opacity: 1,
                 ease: "power1.inOut"
-            }, "-=0.3"); // Se muestra la siguiente sección después del zoom.
+            }, "-=0.3")
+            .to(".content_title", {
+                y: 0,
+                opacity: 1,
+                ease: "power1.inOut",
+                onStart: function() {
+                    document.querySelector(".content_title").style.display = "block";
+                }
+            }, "-=0.6"); 
     })
 }
 
 function blobby(){
-    document.querySelectorAll('.blob').forEach((blob, index) => {
-        const duration = 20 + Math.random() * 10;  // Variar un poco la duración
-        blob.style.animation = `move${index + 1} ${duration}s infinite linear`;
-    
-        const keyframes = `@keyframes move${index + 1} {
-            from {
-                transform: rotate(${index * 90}deg) translate(200px, 0.1px) rotate(-${index * 90}deg);
-            }
-            to {
-                transform: rotate(${index * 90 + 360}deg) translate(200px, 0.1px) rotate(-${index * 90 + 360}deg);
-            }
-        }`;
-    
-        const styleSheet = document.createElement("style");
-        styleSheet.type = "text/css";
-        styleSheet.innerText = keyframes;
-        document.head.appendChild(styleSheet);
-    });    
+    const box = document.querySelector('.box');
+
+    setInterval(setBorderRadius, 300);
+
+    function setBorderRadius() {
+        box.style.setProperty('--br-blobby', generateBorderRadiusValue());
+        box.style.setProperty('--br-blobby-after', generateBorderRadiusValue());
+        box.style.setProperty('--br-blobby-before', generateBorderRadiusValue());
+    }
+
+    function generateBorderRadiusValue() {
+        return `${getRandomValue()}% ${getRandomValue()}% ${getRandomValue()}% ${getRandomValue()}% / ${getRandomValue()}% ${getRandomValue()}% ${getRandomValue()}% ${getRandomValue()}%`;
+    }
+     
+    function getRandomValue() {
+        return Math.floor(Math.random() * 50) + 50;
+    }
+
 }
