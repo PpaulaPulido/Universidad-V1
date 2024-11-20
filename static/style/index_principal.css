@@ -109,6 +109,7 @@ a{
     font-size: 18px;
     margin: 50px auto;
     color: #414040;
+    line-height: 2;
 }
 .button{
     text-align: center;

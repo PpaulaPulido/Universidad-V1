@@ -1,19 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const dropdownToggle = document.querySelector('.dropdown-toggle');
-    const submenuContainer = document.querySelector('.submenu-container');
-
-    dropdownToggle.addEventListener('click', (e) => {
-        e.preventDefault();
-        submenuContainer.classList.toggle('show');
-    });
-
-    // Cerrar el submenú al hacer clic fuera de él
-    document.addEventListener('click', (e) => {
-        if (!dropdownToggle.contains(e.target) && !submenuContainer.contains(e.target)) {
-            submenuContainer.classList.remove('show');
-        }
-    });
-
     counter(0, 90120, 9000,"counter");
     counter(0, 420, 9000,"counter_tree");
     counter(0, 15, 3000,"counter_water");

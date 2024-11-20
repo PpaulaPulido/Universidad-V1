@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,500;1,6..12,500&family=Poppins:wght@300;400&family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    padding-top: 10%;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Roboto Slab', serif;
+
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    z-index: 1000;
+}
+.navbar_header {
+    padding: 10px 15px;
+}
+
+.header_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list_logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.container_logo {
+    margin-right: 40px;
+}
+
+.list_li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.list_li .logo {
+    color: #07b48f;
+    font-size: 30px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.list_li .login {
+    margin-right: 40px;
+    font-size: 17px;
+}
+
+.list_li img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.list_li i {
+    margin-right: 15px;
+    color: #07b48f;
+}
+
+.navbar {
+    padding: 1rem;
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1px;
+}
+.navbar-list a {
+    color: #000;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+.container_list {
+    display: flex;
+    justify-content: center;
+    margin-right: 60px;
+}
+
+.container_list li {
+    margin: 0 20px;
+}
+
+.container_list li a:hover{
+    color: #07b48f;
+    text-decoration: underline;
+    text-underline-offset:10px;
+}
+
+.list_green {
+    background-color: #07b48f;
+    border-radius: 8px 8px 0 0;
+
+}
+
+.list_green a {
+    color: #fff;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.submenu-container {
+    position: absolute;
+    top: 60px;
+    left: -180px;
+    overflow: hidden;
+    opacity: 0;
+    padding: 20px;
+    width: 100vw;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.submenu {
+    list-style: none;
+}
+
+.submenu li a {
+    color: #000000;
+    padding: 0.5rem 1rem;
+    display: block;
+    white-space: nowrap;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.submenu li a:hover {
+    color: #07b48f;
+}
+
+.submenu-container.show {
+    opacity: 1;
+    transform: translateX(0);
+}
