@@ -129,11 +129,6 @@ a{
 .button button:hover{
     background-color: #006652;
 }
-.image{
-    margin-left:7rem;
-    margin-top: 150px;
-    padding: 20px;
-}
 
 .image img {
     width: 230px;
@@ -162,7 +157,7 @@ a{
     width: 440px;
     transition: 0.3s linear;
     margin-top: 50px;
-    margin-left: 150px;
+    margin-left: 90px;
 }
 
 .box::after {
@@ -198,5 +193,126 @@ a{
     
     100% {
         transform: rotate(360deg);
+    }
+}
+/* Para pantallas medianas (tabletas, entre 768px y 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .content_title h1 {
+        font-size: 100px;
+    }
+
+    .section.gradient-purple {
+        height: 600px;
+        display: block;
+    }
+
+    .section-container-text {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .container-text {
+        width: 400px;
+    }
+
+    .button button {
+        width: 180px;
+        font-size: 15px;
+    }
+
+    .image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .section-container-image {
+        display: flex;
+        justify-content: center; 
+        align-items: center;     
+        position: relative;      
+        height: 100%;           
+        padding: 30px;          
+    }
+    
+    .box{
+        margin-left: 200px;
+        height: 400px;
+        width: 380px;
+    }
+
+    .image {
+        position: relative;
+        top: 0%;
+        left: -25%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 767px) {
+    .wrapper {
+        height: 100%;
+    }
+    .content_title{
+        top: 30%;
+    }
+    .content_title h1 {
+        font-size: 70px;
+        text-align: center;
+    }
+
+    .section.gradient-purple {
+        display: block;
+        height: auto;
+        padding: 20px;
+    }
+
+    .section-container-text {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .container-text {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+        box-shadow: none;
+        border-radius: 10px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .text {
+        font-size: 16px;
+        margin: 20px auto;
+        line-height: 1.5;
+    }
+
+    .button button {
+        width: 150px;
+        font-size: 14px;
+    }
+
+    .image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .section-container-image {
+        padding: 20px;
+    }
+
+    .image {
+        position: relative;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .box {
+        height: 200px;
+        width: 200px;
+        margin-top: 20px;
     }
 }

@@ -23,3 +23,74 @@
     text-align: center;
     margin-top: 50px;
 }
+.container_products{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background-color: #07b48f;
+    padding: 50px;
+    margin: 30px 0;
+}
+.container_products .product_item{
+    margin: 40px auto;
+}
+.product_item .product_img{
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+}
+@media (max-width: 767px) {
+    .text{
+        font-size: 17px;
+    }
+    .container_products{
+        grid-template-columns: none;
+    }
+}
+/*estilos de recycle product detail*/
+.container_products_details{
+    margin: 50px 20px 0 20px;
+    padding: 20px;
+}
+.product_details{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin: 50px auto 20px auto;
+    background: #07b48f;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 10px 20px rgba(0, 0, 0, 0.15);
+    color: #fff;
+}
+.details_info_general{
+    padding: 30px;
+    width: 600px;
+}
+.details_info_image{
+    width: 300px;
+    height: 300px;
+    margin: 0 50px;
+}
+.details_info_image img{
+    height: 100%;
+    width: 100%;
+    border-radius: 9px;
+}
+.details_info_general .title{
+    text-transform: capitalize;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.details_step_list{
+    list-style: square;
+    font-size: 20px;
+    line-height: 2;
+}
+.details_info_notes h4{
+    text-transform: capitalize;
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 50px;
+}

@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
+    show_submenu()
+    swipper()
     counter(0, 90120, 9000,"counter");
     counter(0, 420, 9000,"counter_tree");
     counter(0, 15, 3000,"counter_water");
